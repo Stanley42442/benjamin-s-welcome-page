@@ -1,78 +1,62 @@
 import { Link } from "wouter";
 import { MessageCircle, Menu, FileText, Palette, ArrowRight } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SERVICES } from "@/lib/constants";
 
-const iconMap = {
-  MessageCircle,
-  Menu,
-  FileText,
-  Palette,
-};
+const iconMap = { MessageCircle, Menu, FileText, Palette };
 
 export default function Services() {
   return (
-    <div className="min-h-screen py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-16 sm:py-24">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4" data-testid="text-page-title">Specialized Services</h1>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto" data-testid="text-page-subtitle">
-            Expert mobile frontend optimization and repair services. We resolve critical website issues with precision and efficiency, enabling you to maintain business continuity.
+        <div className="mb-14">
+          <p className="text-sm font-medium tracking-wide uppercase text-primary mb-2">What we offer</p>
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3" data-testid="text-page-title">Specialized Services</h1>
+          <p className="text-muted-foreground text-lg max-w-2xl" data-testid="text-page-subtitle">
+            Expert mobile frontend optimization and repair. We resolve critical issues with precision and efficiency.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-20">
           {SERVICES.map((service) => {
             const Icon = iconMap[service.icon as keyof typeof iconMap];
             return (
               <Link key={service.id} href={`/${service.id}`}>
-                <Card
-                  className="h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-pointer"
+                <div
+                  className="group p-6 rounded-lg border bg-card hover:border-primary/30 transition-colors cursor-pointer h-full"
                   data-testid={`card-service-${service.id}`}
                 >
-                  <CardHeader>
-                    <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <Icon className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-2xl">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-6">{service.description}</p>
-                    <div className="flex items-center text-primary font-medium">
-                      View Pricing & Details
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </div>
-                  </CardContent>
-                </Card>
+                  <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center mb-4">
+                    <Icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="text-xl font-semibold mb-2">{service.title}</h2>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">{service.description}</p>
+                  <span className="text-sm font-medium text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
+                    View Pricing & Details <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
               </Link>
             );
           })}
         </div>
 
         {/* Why Choose Us */}
-        <div className="bg-muted/30 rounded-lg p-8 sm:p-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center" data-testid="text-why-choose-title">Why Choose OptiSolve Labs?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center" data-testid="feature-fast">
-              <div className="text-4xl font-bold text-primary mb-2" data-testid="text-feature-fast-title">Efficient</div>
-              <p className="text-muted-foreground" data-testid="text-feature-fast-description">
-                Most issues resolved within 24-72 hours. Expedited service available for time-sensitive requirements.
-              </p>
-            </div>
-            <div className="text-center" data-testid="feature-reliable">
-              <div className="text-4xl font-bold text-primary mb-2" data-testid="text-feature-reliable-title">Professional</div>
-              <p className="text-muted-foreground" data-testid="text-feature-reliable-description">
-                Comprehensive support with 30-90 day follow-up included. Complete satisfaction commitment.
-              </p>
-            </div>
-            <div className="text-center" data-testid="feature-affordable">
-              <div className="text-4xl font-bold text-primary mb-2" data-testid="text-feature-affordable-title">Transparent</div>
-              <p className="text-muted-foreground" data-testid="text-feature-affordable-description">
-                Competitive pricing with full cost visibility. No additional charges. Early adopters receive 50% discount.
-              </p>
-            </div>
+        <div className="border-t pt-16">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-10 text-center" data-testid="text-why-choose-title">
+            Why Choose OptiSolve Labs?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {[
+              { title: "Efficient", desc: "Most issues resolved within 24–72 hours. Expedited service available for urgent needs." },
+              { title: "Professional", desc: "Comprehensive support with 30–90 day follow-up included. Complete satisfaction commitment." },
+              { title: "Transparent", desc: "Competitive pricing with full cost visibility. No hidden fees. Early adopters receive 50% discount." },
+            ].map((item) => (
+              <div key={item.title} className="text-center">
+                <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
