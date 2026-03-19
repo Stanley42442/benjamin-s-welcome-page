@@ -27,6 +27,7 @@ export function Footer() {
                 { href: "/menu-fix", label: "Menu Fix" },
                 { href: "/form-fix", label: "Form Fix" },
                 { href: "/visual-overhaul", label: "Visual Overhaul" },
+                { href: "/website-build", label: "Website Build" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">

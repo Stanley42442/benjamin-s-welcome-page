@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { MessageCircle, Menu, FileText, Palette, ArrowRight, Send } from "lucide-react";
+import { MessageCircle, Menu, FileText, Palette, Globe, ArrowRight, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -16,6 +16,7 @@ const iconMap = {
   Menu,
   FileText,
   Palette,
+  Globe,
 };
 
 export default function Home() {

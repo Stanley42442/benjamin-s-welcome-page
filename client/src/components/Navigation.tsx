@@ -22,6 +22,7 @@ export function Navigation() {
     { href: "/menu-fix", label: "Menu Fix" },
     { href: "/form-fix", label: "Form Fix" },
     { href: "/visual-overhaul", label: "Visual Overhaul" },
+    { href: "/website-build", label: "Website Build" },
   ];
 
   const isActive = (href: string) => location === href;

@@ -116,6 +116,7 @@ export default function Contact() {
                       <option value="whatsapp">WhatsApp Button Fix</option>
                       <option value="form">Contact Form Fix</option>
                       <option value="visual">Visual Overhaul</option>
+                      <option value="website-build">Website Building</option>
                       <option value="other">Other</option>
                     </select>
                   </div>

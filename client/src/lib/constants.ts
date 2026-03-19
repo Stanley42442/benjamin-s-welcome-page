@@ -165,6 +165,71 @@ export const SERVICES: Service[] = [
         ]
       }
     ]
+  },
+  {
+    id: "website-build",
+    title: "Custom Website Building",
+    description: "Get a professionally designed, mobile-friendly website built from scratch — perfect for businesses, portfolios, and online stores.",
+    icon: "Globe",
+    pricing: [
+      {
+        name: "Landing Page",
+        originalPrice: 35000,
+        deliveryTime: "3-5 days",
+        features: [
+          "1-3 page website",
+          "Mobile-responsive design",
+          "Contact form integration",
+          "WhatsApp button setup",
+          "Basic SEO setup",
+          "30-day support"
+        ]
+      },
+      {
+        name: "Business Standard",
+        originalPrice: 75000,
+        deliveryTime: "7-10 days",
+        features: [
+          "5-7 page website",
+          "Custom design & branding",
+          "Mobile-first responsive layout",
+          "Contact & inquiry forms",
+          "Google Maps integration",
+          "Social media links",
+          "SEO optimization",
+          "60-day support"
+        ]
+      },
+      {
+        name: "Premium",
+        originalPrice: 150000,
+        deliveryTime: "14-21 days",
+        features: [
+          "Unlimited pages",
+          "E-commerce / product catalog",
+          "Custom animations & interactions",
+          "Blog / content management",
+          "Payment gateway integration",
+          "Advanced SEO & analytics",
+          "Performance optimization",
+          "90-day support"
+        ]
+      },
+      {
+        name: "Rush Delivery",
+        originalPrice: 100000,
+        deliveryTime: "5-7 days",
+        features: [
+          "5-7 page website",
+          "Custom design & branding",
+          "Mobile-first responsive layout",
+          "Contact & inquiry forms",
+          "SEO optimization",
+          "Priority support",
+          "Express delivery"
+        ]
+      }
+    ]
   }
 ];
 
