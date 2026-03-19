@@ -2,7 +2,9 @@ import { Link } from "wouter";
 import { MessageCircle, Menu, FileText, Palette, ArrowRight } from "lucide-react";
 import { SERVICES } from "@/lib/constants";
 
-const iconMap = { MessageCircle, Menu, FileText, Palette };
+import { Globe } from "lucide-react";
+
+const iconMap = { MessageCircle, Menu, FileText, Palette, Globe };
 
 export default function Services() {
   return (

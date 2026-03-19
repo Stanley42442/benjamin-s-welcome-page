@@ -16,6 +16,7 @@ const iconMap = {
   Menu,
   FileText,
   Palette,
+  Globe,
 };
 
 export default function Home() {

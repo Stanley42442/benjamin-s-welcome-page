@@ -39,6 +39,7 @@ function Router() {
       <Route path="/menu-fix" component={MenuFixService} />
       <Route path="/form-fix" component={FormFixService} />
       <Route path="/visual-overhaul" component={VisualOverhaulService} />
+      <Route path="/website-build" component={WebsiteBuildService} />
       <Route path="/admin" component={Admin} />
       <Route component={NotFound} />
     </Switch>
